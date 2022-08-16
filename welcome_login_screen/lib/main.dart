@@ -53,10 +53,78 @@ class WelcomScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          
+          Expanded(
+              flex: 3,
+              child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:AssetImage("assets/perosn.jpeg"),
+                    fit:BoxFit.cover,
+                  )
+                ),
+              )
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "BAKING LESSONS\n",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 36
+                          ),
+                        ),
+                        TextSpan(
+                          text: "MASTER THE ART OF BAKING",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 24
+                          ),
+                        )
+                      ]
+                    ),
+
+                ),
+                FittedBox(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 26, vertical: 16),
+                    decoration: BoxDecoration(
+                        color: kPrimaryColor,
+                        borderRadius: BorderRadius.circular(25)
+
+                    ),
+                    child: Row(
+                      children: [
+                        Text(
+                            "START LEARNING",
+                            style: TextStyle(
+                                color: Colors.black
+                            )
+                        ),
+                        SizedBox(width: 10),
+                        Icon(
+                          Icons.follow_the_signs,
+                          color: Colors.black,
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );
   }
 }
+
+
 
