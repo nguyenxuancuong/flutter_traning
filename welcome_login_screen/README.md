@@ -1,6 +1,8 @@
 # welcome_login_screen
 
-https://www.youtube.com/watch?v=PpekJXY04fM&t=302s
+- https://www.youtube.com/watch?v=PpekJXY04fM&t=302s
+- Source code: https://github.com/abuanwar072/Login-...
+- Background Image: https://unsplash.com/photos/4yzEtTQLdL4
 
 ## Getting Started
 
