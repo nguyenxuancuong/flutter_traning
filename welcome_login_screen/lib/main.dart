@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:welcome_login_screen/constants.dart';
+import 'package:welcome_login_screen/sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -93,27 +94,32 @@ class WelcomScreen extends StatelessWidget {
 
                 ),
                 FittedBox(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 26, vertical: 16),
-                    decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        borderRadius: BorderRadius.circular(25)
-
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                            "START LEARNING",
-                            style: TextStyle(
-                                color: Colors.black
-                            )
-                        ),
-                        SizedBox(width: 10),
-                        Icon(
-                          Icons.follow_the_signs,
-                          color: Colors.black,
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context){
+                            return SignInScreen();
+                          }
                         )
-                      ],
+                      );
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 26, vertical: 16),
+                      decoration: BoxDecoration(
+                          color: kPrimaryColor,
+                          borderRadius: BorderRadius.circular(25)),
+                      child: Row(
+                        children: [
+                          Text("START LEARNING",
+                              style: TextStyle(color: Colors.black)),
+                          SizedBox(width: 10),
+                          Icon(
+                            Icons.follow_the_signs,
+                            color: Colors.black,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
